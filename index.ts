@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-const modulePath = path.join(__dirname, '../../');
+const modulePath = path.join(__dirname, '..');
 const fs = require(path.join(modulePath, 'fs-extra'));
 
 const defaultDir = '_warmup';
@@ -36,20 +36,19 @@ modify(
       }
       beforeArtifacts = async () => {
         await this.compileTs();
+        await this.copyExtras();
+        await this.copyDependencies(true);
         const target = path.resolve(this.serverless.config.servicePath, opts.warmupDir);
         const warmUpDirectory = path.resolve(this.originalServicePath, opts.warmupDir);
 
         if (fs.existsSync(warmUpDirectory) && !fs.existsSync(target)) {
           await this.linkOrCopy(warmUpDirectory, target, 'junction');
         }
-        await this.copyExtras();
-        await this.copyDependencies(true);
       };
       afterArtifacts = async () => {
         await this.moveArtifacts();
         // Restore service path
         this.serverless.config.servicePath = this.originalServicePath;
-        await this.cleanup();
       };
       finalize = async () => fs.removeSync(path.resolve(this.originalServicePath, opts.buildFolder));
     }

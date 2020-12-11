@@ -1,4 +1,4 @@
-# serverless-plugin-warmup-ts-bridge
+# serverless-plugin-warmup-ts-bridge-v2
 
 The library resolves [a warmup and typescript issue](https://github.com/prisma/serverless-plugin-typescript/issues/125).
 
@@ -17,7 +17,7 @@ Repo with the fix: [pmcretail/serverless-plugin-warmup-ts-bridge](https://github
 ## Install
 
 ```sh
-$ npm install -D @zarconontol/serverless-plugin-warmup-ts-bridge
+$ npm install -D serverless-plugin-warmup-ts-bridge-v2
 ```
 
 

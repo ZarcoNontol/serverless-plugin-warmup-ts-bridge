@@ -1,8 +1,8 @@
 {
-  "name": "@zarconontol/serverless-plugin-warmup-ts-bridge",
-  "version": "0.1.5",
+  "name": "serverless-plugin-warmup-ts-bridge-v2",
+  "version": "0.1.6",
   "main": "index.js",
-  "author": "Suguru Motegi <suguru.motegi@gmail.com>",
+  "author": "Zarco Nontol <zarconontol@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "tsp build"
@@ -38,10 +38,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pmcretail/serverless-plugin-warmup-ts-bridge.git"
+    "url": "git+https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2.git"
   },
   "bugs": {
-    "url": "https://github.com/pmcretail/serverless-plugin-warmup-ts-bridge/issues"
+    "url": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2/issues"
   },
-  "homepage": "https://github.com/pmcretail/serverless-plugin-warmup-ts-bridge#readme"
+  "homepage": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2#readme"
 }
