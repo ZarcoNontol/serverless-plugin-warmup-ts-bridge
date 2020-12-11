@@ -25,12 +25,26 @@ modify(
       get rootFileNames() {
         return super.rootFileNames.filter(filepath => fs.existsSync(path.resolve(this.originalServicePath, filepath)));
       }
+
+      private async linkOrCopy(srcPath: string, dstPath: string, type?: any): Promise<void> {
+        return fs.symlink(srcPath, dstPath, type).catch(error => {
+          if (error.code === 'EPERM' && error.errno === -4048) {
+            return fs.copy(srcPath, dstPath);
+          }
+          throw error;
+        });
+      }
       beforeArtifacts = async () => {
         await this.compileTs();
+        await this.copyExtras();
+        await this.copyDependencies(true);
         const target = path.resolve(this.serverless.config.servicePath, opts.warmupDir);
         const warmUpDirectory = path.resolve(this.originalServicePath, opts.warmupDir);
-        if (!fs.existsSync(warmUpDirectory)) fs.mkdirSync(warmUpDirectory);
-        if (!fs.existsSync(target)) fs.symlinkSync(warmUpDirectory, target);
+
+        if (fs.existsSync(warmUpDirectory) && !fs.existsSync(target)) {
+          await this.linkOrCopy(warmUpDirectory, target, 'junction');
+        }
+
       };
       afterArtifacts = async () => {
         await this.moveArtifacts();

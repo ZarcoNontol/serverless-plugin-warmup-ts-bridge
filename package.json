@@ -1,9 +1,8 @@
 {
-  "name": "serverless-plugin-warmup-ts-bridge",
-  "version": "0.1.3",
+  "name": "serverless-plugin-warmup-ts-bridge-v2",
+  "version": "0.1.6",
   "main": "index.js",
-  "private": true,
-  "author": "Suguru Motegi <suguru.motegi@gmail.com>",
+  "author": "Zarco Nontol <zarconontol@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "tsp build"
@@ -34,5 +33,15 @@
   "prettier": {
     "printWidth": 120,
     "singleQuote": true
-  }
+  },
+  "description": "The library resolves [a warmup and typescript issue](https://github.com/prisma/serverless-plugin-typescript/issues/125).",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2/issues"
+  },
+  "homepage": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2#readme"
 }
