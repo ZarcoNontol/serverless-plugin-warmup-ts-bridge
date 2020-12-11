@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-warmup-ts-bridge-v2",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "index.js",
   "author": "Zarco Nontol <zarconontol@gmail.com>",
   "license": "MIT",
