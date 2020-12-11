@@ -44,6 +44,7 @@ modify(
         if (fs.existsSync(warmUpDirectory) && !fs.existsSync(target)) {
           await this.linkOrCopy(warmUpDirectory, target, 'junction');
         }
+
       };
       afterArtifacts = async () => {
         await this.moveArtifacts();
