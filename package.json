@@ -38,10 +38,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2.git"
+    "url": "git+https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge.git"
   },
   "bugs": {
-    "url": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2/issues"
+    "url": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge/issues"
   },
-  "homepage": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge-v2#readme"
+  "homepage": "https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge#readme"
 }
