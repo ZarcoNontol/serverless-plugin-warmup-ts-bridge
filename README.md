@@ -11,7 +11,7 @@ And also resolves:
 
 Credits to: [jkachhia](https://github.com/jkachhia)
 
-Repo with the fix: [pmcretail/serverless-plugin-warmup-ts-bridge](https://github.com/pmcretail/serverless-plugin-warmup-ts-bridge)
+Repo with the fix: [zarconontol/serverless-plugin-warmup-ts-bridge](https://github.com/zarconontol/serverless-plugin-warmup-ts-bridge)
 
 
 ## Install
